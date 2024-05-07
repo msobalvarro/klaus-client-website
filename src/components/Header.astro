@@ -1,0 +1,23 @@
+---
+import Slider from "./Slider.astro";
+
+const { title, subtitle } = Astro.props;
+---
+
+<div class="relative bg-cover bg-center h-96 py-10">
+  <!-- <div class="absolute inset-0 bg-black opacity-50"></div> -->
+  <div class="absolute inset-0 flex items-center justify-center flex-col">
+    <img
+      class="h-48 w-full object-cover md:w-48 mb-5"
+      src="https://via.placeholder.com/150"
+      alt="Imagen"
+    />
+
+    <div class="text-center text-white">
+      <!-- <Slider /> -->
+
+      <h1 class="text-4xl font-bold">{title}</h1>
+      <p class="text-lg mt-2">{subtitle}</p>
+    </div>
+  </div>
+</div>

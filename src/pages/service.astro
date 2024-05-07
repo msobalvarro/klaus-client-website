@@ -1,0 +1,37 @@
+---
+import Layout from "../layouts/Layout.astro";
+import Header from "../components/Header.astro";
+import Footer from "../components/Footer.astro";
+import ServiceItem from "../components/ServiceItem.astro";
+import FormContact from "../components/FormContact.astro";
+---
+
+<Layout title="Services">
+  <Header title="" subtitle="subtitle" />
+
+  <div class="px-4 py-8 bg-white w-auto">
+    <h1 class="text-3xl font-semibold text-center mb-8 text-[#2d2d2d] uppercase">
+      Catálogo de Servicios
+    </h1>
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+      <ServiceItem
+        title="Servicio 1"
+        description="Lorem ipsum dolor sit amet, consectetur adipiscing elit. Phasellus condimentum tincidunt justo, et venenatis est luctus in."
+      />
+      <ServiceItem
+        title="Servicio 2"
+        description="Pellentesque habitant morbi tristique senectus et netus et malesuada fames ac turpis egestas. Donec tristique ante sit amet justo tristique, at fringilla neque tincidunt."
+      />
+      <ServiceItem
+        title="Servicio 3"
+        description="Sed euismod nulla sit amet turpis vestibulum, vitae eleifend est vestibulum. Nullam id odio non est varius vehicula vel et ligula."
+      />
+      <!-- Agregar más ServiceItems según sea necesario -->
+    </div>
+  </div>
+
+  <FormContact />
+
+  <Footer />
+</Layout>

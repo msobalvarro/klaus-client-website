@@ -1,0 +1,42 @@
+---
+const year = new Date().getFullYear();
+---
+
+<footer class='text-white p-4 w-screen'>
+  <div class='container mx-auto'>
+    <div class='grid grid-cols-1 md:grid-cols-3 gap-4'>
+      <!-- Sección de enlaces -->
+      <div>
+        <h3 class='text-lg font-semibold mb-2'>Enlaces</h3>
+        <ul>
+          <li><a href='#' class='hover:text-gray-300'>Inicio</a></li>
+          <li><a href='#' class='hover:text-gray-300'>Acerca de</a></li>
+          <li><a href='#' class='hover:text-gray-300'>Servicios</a></li>
+          <li><a href='#' class='hover:text-gray-300'>Contacto</a></li>
+        </ul>
+      </div>
+
+      <!-- Información de contacto -->
+      <div>
+        <h3 class='text-lg font-semibold mb-2'>Contacto</h3>
+        <p>Dirección: 123 Calle Principal, Ciudad</p>
+        <p>Teléfono: +123 456 789</p>
+        <p>Email: info@example.com</p>
+      </div>
+
+      <!-- Sobre nosotros -->
+      <div>
+        <h3 class='text-lg font-semibold mb-2'>Sobre Nosotros</h3>
+        <p>
+          Somos una empresa comprometida con la excelencia y la satisfacción del
+          cliente.
+        </p>
+      </div>
+    </div>
+
+    <!-- Derechos de autor -->
+    <div class='mt-4 text-center'>
+      <p>&copy; {year} Nombre de la Empresa. Todos los derechos reservados.</p>
+    </div>
+  </div>
+</footer>

@@ -1,0 +1,20 @@
+---
+const { title, description } = Astro.props;
+---
+
+<div class="bg-gray rounded-lg shadow-md overflow-hidden w-auto">
+  <img
+    class="h-48 w-full object-cover"
+    src="https://via.placeholder.com/512"
+    alt="Imagen de servicio"
+  />
+  <div class="p-4">
+    <h2 class="text-xl font-semibold mb-2 text-[#2d2d2d]">{title}</h2>
+    <p class="text-gray-700">{description}</p>
+    <button
+      class="mt-4 bg-blue-500 hover:bg-blue-600 text-white font-semibold py-2 px-4 rounded"
+    >
+      Contacto
+    </button>
+  </div>
+</div>

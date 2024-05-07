@@ -1,0 +1,64 @@
+---
+const images = [
+  "https://3ton.es/wp-content/uploads/2021/05/anlizando-datos-empresariales-1080x675.jpg",
+  "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSoCT-I15e3IgeACCjWT5kbnSJxxH1TVOAroR5F3bSZ8A&s",
+  "https://laguaridacreativa.es/wp-content/uploads/2021/09/Coworking-en-Comunidad-Fuenlabrada-Facemonkey-1080x675.jpg",
+  "https://www.ips.com.mx/blog/wp-content/uploads/2023/06/que-es-el-desarrollo-de-personal-en-una-empresa-1080x675.jpg",
+];
+
+const slider = document.getElementById("slider");
+const imagesElement = slider.querySelectorAll("img");
+const prevBtn = document.getElementById("prevBtn");
+const nextBtn = document.getElementById("nextBtn");
+let currentIndex = 0;
+
+function showImage(index) {
+  imagesElement.forEach((image, i) => {
+    if (i === index) {
+      image.classList.remove("hidden");
+    } else {
+      image.classList.add("hidden");
+    }
+  });
+}
+
+function nextSlide() {
+  currentIndex = (currentIndex + 1) % imagesElement.length;
+  showImage(currentIndex);
+}
+
+function prevSlide() {
+  currentIndex =
+    (currentIndex - 1 + imagesElement.length) % imagesElement.length;
+  showImage(currentIndex);
+}
+
+nextBtn.addEventListener("click", nextSlide);
+prevBtn.addEventListener("click", prevSlide);
+
+showImage(currentIndex);
+---
+
+<div class="w-full bg-gray-200">
+  <div class="max-w-7xl mx-auto px-4 py-12">
+    <div id="slider" class="relative overflow-hidden">
+      <div class="flex">
+        {
+          images.map((image) => (
+            <img src={image} alt="Image 1" class="w-full" />
+          ))
+        }
+      </div>
+      <button
+        id="prevBtn"
+        class="absolute top-1/2 left-0 transform -translate-y-1/2 bg-white bg-opacity-50 px-4 py-2 rounded-l-md"
+        >Prev</button
+      >
+      <button
+        id="nextBtn"
+        class="absolute top-1/2 right-0 transform -translate-y-1/2 bg-white bg-opacity-50 px-4 py-2 rounded-r-md"
+        >Next</button
+      >
+    </div>
+  </div>
+</div>
